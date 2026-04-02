@@ -2,9 +2,12 @@
 
 ## 1. System Design
 
+- The system should be able to hold information about the users schedule, the users pet info, and be able to put this information together to create a schedule.
+
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+    - There should be a class that is in charge of tasks. It should be able to add/remove tasks as well as update them. There should be a class holding user info and pet info seperately. This information will have priorites and time constraints attached to them. The last class should handle the schedule being created.
 - What classes did you include, and what responsibilities did you assign to each?
 
 **b. Design changes**
