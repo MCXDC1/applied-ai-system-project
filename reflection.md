@@ -7,13 +7,17 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
-    - There should be a class that is in charge of tasks. It should be able to add/remove tasks as well as update them. There should be a class holding user info and pet info seperately. This information will have priorites and time constraints attached to them. The last class should handle the schedule being created.
+    - There should be a task class (holding task info). The scheduler should be able to add/remove tasks as well as update them. There should be a class holding user info and pet info seperately. This information will have priorites and time constraints attached to them. The schedule pulls from owner to understand tasks and time slots.
+
 - What classes did you include, and what responsibilities did you assign to each?
+    - I included four classes, three classes holding info for pets, user, and task. Then a class that acts as a manager. The managing class will be updating, removing, and addings info/tasks.
 
 **b. Design changes**
 
 - Did your design change during implementation?
+    - Yes, the amount of classes changed and the methods.
 - If yes, describe at least one change and why you made it.
+    - I changed the way my classes were set up. I originally did had tasks seperated from a task manager. The AI suggested to connect the pets tasks to the schedule. I accepted this change in order to delegate tasks more efficiently. It also suggested I add in more helper methods to take the complexity out of the scheduler.
 
 ---
 
