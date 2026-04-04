@@ -17,7 +17,7 @@
 - Did your design change during implementation?
     - Yes, the amount of classes changed and the methods.
 - If yes, describe at least one change and why you made it.
-    - I changed the way my classes were set up. I originally did had tasks seperated from a task manager. The AI suggested to connect the pets tasks to the schedule. I accepted this change in order to delegate tasks more efficiently. It also suggested I add in more helper methods to take the complexity out of the scheduler.
+    - I changed the way my classes were set up. I originally had tasks seperated from a task manager. This was how the AI originally structured it. The AI suggested to connect the pets tasks to the schedule based on this task manager. I then went back through what I wanted from the app and changed this to just four classes. I did this change in order to delegate tasks more efficiently. 
 
 ---
 
@@ -26,12 +26,16 @@
 **a. Constraints and priorities**
 
 - What constraints does your scheduler consider (for example: time, priority, preferences)?
+    - It considers priority, frequency, duration.
 - How did you decide which constraints mattered most?
+    - Priority is what matters the most as I believe the app should follow what the user is telling it. 
 
 **b. Tradeoffs**
 
 - Describe one tradeoff your scheduler makes.
+    - The scheduler will autofill tasks to wake time that are not specified.
 - Why is that tradeoff reasonable for this scenario?
+    - In this scenario, to create a schedule it is basing it off of information that is being given. This means that it will set to wake time at the moment to place it into the schedule. From there I will be able to fix to randomize the timing.
 
 ---
 

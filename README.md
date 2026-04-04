@@ -41,3 +41,7 @@ pip install -r requirements.txt
 5. Add tests to verify key behaviors.
 6. Connect your logic to the Streamlit UI in `app.py`.
 7. Refine UML so it matches what you actually built.
+
+### Smarter Scheduling
+
+The scheduler is able to place tasks into an Owner's schedule and seperate tasks based on pet, priority, and frequency. It is able to update tasks that have been completed to the next needed occurence. It is able to detect conflicts between timing. It is able to remember the Owner and Pet for easy updating. 
