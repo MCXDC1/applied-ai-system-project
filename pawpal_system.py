@@ -270,10 +270,11 @@ class Scheduler:
         """
         sorted_items = sorted(self.schedule, key=lambda x: _time_to_minutes(x.time_slot))
         conflicts = []
-        for i in range(len(sorted_items) - 1):
-            a, b = sorted_items[i], sorted_items[i + 1]
-            if a.end_minutes() > _time_to_minutes(b.time_slot):
-                conflicts.append((a, b))
+        for i in range(len(sorted_items)):
+            for j in range(i + 1, len(sorted_items)):
+                a, b = sorted_items[i], sorted_items[j]
+                if a.end_minutes() > _time_to_minutes(b.time_slot):
+                    conflicts.append((a, b))
         return conflicts
 
     def explain_schedule(self) -> str:

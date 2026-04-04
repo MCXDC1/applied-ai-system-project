@@ -45,3 +45,11 @@ pip install -r requirements.txt
 ### Smarter Scheduling
 
 The scheduler is able to place tasks into an Owner's schedule and seperate tasks based on pet, priority, and frequency. It is able to update tasks that have been completed to the next needed occurence. It is able to detect conflicts between timing. It is able to remember the Owner and Pet for easy updating. 
+
+### Testing PawPal+
+
+python -m pytest
+
+The tests cover that tasks are being added in relation to the info that is put in by the user. It makes sure that there are not duplicate events. It makes sure that daily/weekly/etc. tasks are being updated based on freuency. It tests edge cases such as Owners with no tasks for the Pet and the schedule being built. It tests that tasks get automatically sorted to midnight or waketime if the user does not put the information in.
+
+My confidence is a 4. I believe the system is working as intended but believe that I will find minor tweaks once I move around within the application.
