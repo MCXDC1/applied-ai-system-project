@@ -16,15 +16,7 @@ def is_due_today(task: "Task", reference_date: date = None) -> bool:
     # If a specific due date was assigned (e.g. for a rescheduled recurring task), use it.
     if task.due_date is not None:
         return task.due_date == reference_date
-    if task.frequency == "daily":
-        return True
-    if task.frequency == "weekly":
-        return reference_date.weekday() == 0  # every Monday
-    if task.frequency == "monthly":
-        return reference_date.day == 1
-    if task.frequency == "yearly":
-        return reference_date.month == 1 and reference_date.day == 1
-    return False
+    return True
 
 
 @dataclass

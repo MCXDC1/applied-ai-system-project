@@ -1,58 +1,71 @@
 ```mermaid
 classDiagram
     class Pet {
-        +String name
-        +String species
+        +str name
+        +str species
         +int age
-        +String breed
-        +List~str~ dietary_restrictions
-        +List~str~ medication_information
-        +List~str~ additional_information
+        +str breed
+        +list~str~ dietary_restrictions
+        +list~str~ medication_information
+        +list~str~ additional_information
+        +list~Task~ tasks
         +get_info() str
+        +add_task(task: Task) None
+        +remove_task(description: str) None
+        +get_pending_tasks() list~Task~
     }
 
     class Owner {
-        +String name
-        +String wake_time
-        +String sleep_time
-        +List~str~ preferences
-        +List~str~ additional_information
-        +Pet pet
+        +str name
+        +str wake_time
+        +str sleep_time
+        +list~Pet~ pets
+        +list~str~ preferences
+        +list~str~ additional_information
+        +add_pet(pet: Pet) None
         +get_availability() tuple
+        +get_all_tasks() list~Task~
+        +get_tasks_for_pet(pet_name: str, completed: bool) list~Task~
+        +get_tasks_by_status(completed: bool) list~Task~
     }
 
     class Task {
-        +String title
-        +int duration_minutes
-        +String priority
-        +String preferred_time
+        +str description
+        +str frequency
+        +str duration
+        +int priority
+        +str time
         +bool is_completed
-        +complete() None
+        +Optional~date~ due_date
+        +complete() Optional~Task~
         +to_dict() dict
     }
 
-    class TaskManager {
-        +List~Task~ tasks
-        +add_task(task: Task) None
-        +remove_task(title: str) None
-        +update_task(title: str, kwargs) None
-        +get_by_priority(priority: str) List~Task~
-        +get_all_tasks() List~Task~
+    class ScheduledItem {
+        +Task task
+        +str time_slot
+        +Pet pet
+        +end_minutes() int
     }
 
     class Scheduler {
         +Owner owner
-        +Pet pet
-        +TaskManager task_manager
-        +List~dict~ schedule
-        +build_schedule() List~dict~
+        +list~Pet~ pets
+        +list~ScheduledItem~ schedule
+        +build_schedule(reference_date: date) list~ScheduledItem~
+        +complete_task(item: ScheduledItem) Optional~Task~
+        +filter_tasks(pet_name: str, completed: bool) list~Task~
+        +sort_by_time(tasks: list~Task~) list~Task~
+        +filter_schedule(pet_name: str, completed: bool) list~ScheduledItem~
+        +warn_same_time_conflicts() str
+        +detect_conflicts() list~tuple~
         +explain_schedule() str
-        +get_total_time() int
     }
 
     Scheduler --> Owner
-    Scheduler --> Pet
-    Scheduler --> TaskManager
-    TaskManager "1" o-- "many" Task
-    Owner "1" --> "1" Pet
+    Scheduler "1" o-- "many" ScheduledItem
+    ScheduledItem --> Task
+    ScheduledItem --> Pet
+    Owner "1" --> "many" Pet
+    Pet "1" o-- "many" Task
 ```

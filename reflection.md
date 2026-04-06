@@ -44,12 +44,16 @@
 **a. How you used AI**
 
 - How did you use AI tools during this project (for example: design brainstorming, debugging, refactoring)?
+    - I used it for testing and the structure of the classes. It also aided in helping with streamlit as I am not as familiar with it.
 - What kinds of prompts or questions were most helpful?
+    - I found it most helpful to ask it to give me multiple suggestions for how I should fix a problem and often would combine solutions.
 
 **b. Judgment and verification**
 
 - Describe one moment where you did not accept an AI suggestion as-is.
+    - The AI wanted me to use a task manager to manage tasks which I found to not completely align with what was expected of the app.
 - How did you evaluate or verify what the AI suggested?
+    - I asked it to compare using just the scheduler instead of having a seperate manager, and then asked how to combine that with the task and pet class.
 
 ---
 
@@ -58,12 +62,16 @@
 **a. What you tested**
 
 - What behaviors did you test?
+    - I tested the tasks and how they were acting. Things like conflicts, overriding, and adding/deleting tasks.
 - Why were these tests important?
+    - I believed this to be the center of the schedule app and wanted to make sure it was functioning as expected when being used in combination with the pets.
 
 **b. Confidence**
 
 - How confident are you that your scheduler works correctly?
+    - I am 90% confident. I believe there are still things that would make the user experience smoother.
 - What edge cases would you test next if you had more time?
+    - I would most likely try more combinations of tasks of dates and animals and owners. I did my own testing within the app of different pets and task combinations but would love to go further and build a much larger schedule.
 
 ---
 
@@ -72,11 +80,14 @@
 **a. What went well**
 
 - What part of this project are you most satisfied with?
+    - I am most satisfied with the task creation and the schedule.
 
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
+    - I would improve the priority system and the timing of the schedule.
 
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+    - I had to do outside research to understand a lot of what the AI thought would be more efficient. It taught me how AI can soemtimes be a driving force to learn more information.

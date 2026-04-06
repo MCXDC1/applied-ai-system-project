@@ -231,11 +231,12 @@ def test_detect_conflicts_misses_non_adjacent_overlap():
 # Edge cases: recurring task scheduling
 # ---------------------------------------------------------------------------
 
-def test_weekly_task_not_due_on_non_monday():
+def test_weekly_task_due_on_any_day():
+    # All tasks are always due on any selected date regardless of frequency
     tuesday = date(2026, 3, 31)
     assert tuesday.weekday() == 1  # sanity check
     task = Task(description="Bath", frequency="weekly")
-    assert is_due_today(task, reference_date=tuesday) is False
+    assert is_due_today(task, reference_date=tuesday) is True
 
 
 def test_weekly_task_due_on_monday():
