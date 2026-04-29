@@ -3,21 +3,6 @@ from datetime import date, timedelta
 from typing import Optional
 
 
-def _time_to_minutes(time_str: str) -> int:
-    """Converts 'HH:MM' to total minutes since midnight for correct numeric sorting."""
-    h, m = map(int, time_str.split(":"))
-    return h * 60 + m
-
-
-def is_due_today(task: "Task", reference_date: date = None) -> bool:
-    """Returns True if a task should appear in today's schedule based on its frequency."""
-    if reference_date is None:
-        reference_date = date.today()
-    # If a specific due date was assigned (e.g. for a rescheduled recurring task), use it.
-    if task.due_date is not None:
-        return task.due_date == reference_date
-    return True
-
 
 @dataclass
 class Task:
@@ -65,20 +50,18 @@ class Task:
             "due_date": self.due_date.isoformat() if self.due_date else None,
         }
 
+    @classmethod
+    def from_dict(cls, d: dict) -> "Task":
+        return cls(
+            description=d["description"],
+            frequency=d.get("frequency", "daily"),
+            duration=d.get("duration", ""),
+            priority=d.get("priority", 2),
+            time=d.get("time", ""),
+            is_completed=d.get("is_completed", False),
+            due_date=date.fromisoformat(d["due_date"]) if d.get("due_date") else None,
+        )
 
-@dataclass
-class ScheduledItem:
-    task: Task
-    time_slot: str
-    pet: "Pet" = field(default=None)
-
-    def end_minutes(self) -> int:
-        """Returns the minute-of-day when this item ends, defaulting to a 30-min block."""
-        start = _time_to_minutes(self.time_slot)
-        if self.task.duration:
-            h, m = map(int, self.task.duration.split(":"))
-            return start + h * 60 + m
-        return start + 30
 
 
 @dataclass
@@ -118,6 +101,32 @@ class Pet:
         """Returns all incomplete tasks for this pet."""
         return [t for t in self.tasks if not t.is_completed]
 
+    def to_dict(self) -> dict:
+        return {
+            "name": self.name,
+            "species": self.species,
+            "age": self.age,
+            "breed": self.breed,
+            "dietary_restrictions": self.dietary_restrictions,
+            "medication_information": self.medication_information,
+            "additional_information": self.additional_information,
+            "tasks": [t.to_dict() for t in self.tasks],
+        }
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Pet":
+        pet = cls(
+            name=d["name"],
+            species=d["species"],
+            age=d["age"],
+            breed=d["breed"],
+            dietary_restrictions=d.get("dietary_restrictions", []),
+            medication_information=d.get("medication_information", []),
+            additional_information=d.get("additional_information", []),
+        )
+        pet.tasks = [Task.from_dict(t) for t in d.get("tasks", [])]
+        return pet
+
 
 class Owner:
     def __init__(self, name: str, wake_time: str, sleep_time: str, pets: list[Pet],
@@ -155,149 +164,3 @@ class Owner:
     def get_tasks_by_status(self, completed: bool) -> list[Task]:
         """Returns all tasks across every pet filtered by completion status."""
         return [t for pet in self.pets for t in pet.tasks if t.is_completed == completed]
-
-
-class Scheduler:
-    def __init__(self, owner: Owner):
-        self.owner = owner
-        self.pets = owner.pets
-        self.schedule: list[ScheduledItem] = []
-
-    def build_schedule(self, reference_date: date = None) -> list[ScheduledItem]:
-        """
-        Assigns each due task a time slot within the owner's wake/sleep window.
-        Tasks with a time are pinned to that slot; the rest default to wake_time.
-        Tasks are sorted by time then priority (1=highest).
-        """
-        if reference_date is None:
-            reference_date = date.today()
-
-        wake_time, _ = self.owner.get_availability()
-        self.schedule = []
-
-        for pet in self.owner.pets:
-            for task in pet.get_pending_tasks():
-                if not is_due_today(task, reference_date):
-                    continue
-                time_slot = task.time if task.time else wake_time
-                self.schedule.append(ScheduledItem(task=task, time_slot=time_slot, pet=pet))
-
-        # Sort by time, then by priority within the same slot
-        self.schedule.sort(key=lambda x: (_time_to_minutes(x.time_slot), x.task.priority))
-        return self.schedule
-
-    def complete_task(self, item: ScheduledItem) -> Optional[Task]:
-        """Marks a scheduled task complete and auto-schedules the next occurrence.
-
-        """
-        next_task = item.task.complete()
-        if next_task is not None and item.pet is not None:
-            item.pet.add_task(next_task)
-        return next_task
-
-    def filter_tasks(self, pet_name: str = None, completed: bool = None) -> list[Task]:
-        """
-        Returns Task objects filtered by pet name, completion status, or both.
-
-        """
-        results = []
-        for pet in self.owner.pets:
-            if pet_name is not None and pet.name != pet_name:
-                continue
-            for task in pet.tasks:
-                if completed is not None and task.is_completed != completed:
-                    continue
-                results.append(task)
-        return results
-
-    def sort_by_time(self, tasks: list[Task]) -> list[Task]:
-        """Returns tasks sorted chronologically using a lambda key that converts 'HH:MM' to minutes."""
-        return sorted(
-            tasks,
-            key=lambda task: _time_to_minutes(task.time) if task.time else 0,
-        )
-
-    def filter_schedule(self, pet_name: str = None, completed: bool = None) -> list[ScheduledItem]:
-        """Returns a filtered view of the schedule by pet name and/or completion status."""
-        items = self.schedule
-        if pet_name is not None:
-            items = [i for i in items if i.pet and i.pet.name == pet_name]
-        if completed is not None:
-            items = [i for i in items if i.task.is_completed == completed]
-        return items
-
-    def warn_same_time_conflicts(self) -> str:
-        """Returns a warning string listing every pair of tasks
-        (same pet or different pets) that share the exact same time slot.
-        Returns an empty string if no conflicts are found.
-        """
-        # Group items by time slot
-        from collections import defaultdict
-        slots: dict[str, list[ScheduledItem]] = defaultdict(list)
-        for item in self.schedule:
-            slots[item.time_slot].append(item)
-
-        warnings = []
-        for time_slot, items in slots.items():
-            if len(items) < 2:
-                continue
-            for i in range(len(items)):
-                for j in range(i + 1, len(items)):
-                    a, b = items[i], items[j]
-                    pet_a = a.pet.name if a.pet else "?"
-                    pet_b = b.pet.name if b.pet else "?"
-                    warnings.append(
-                        f"  WARNING {time_slot}: '{a.task.description}' ({pet_a})"
-                        f" conflicts with '{b.task.description}' ({pet_b})"
-                    )
-
-        if not warnings:
-            return ""
-        return "Scheduling conflicts detected:\n" + "\n".join(warnings)
-
-    def detect_conflicts(self) -> list[tuple[ScheduledItem, ScheduledItem]]:
-        """
-        Returns pairs of ScheduledItems whose time windows overlap.
-        Assumes a 30-minute default block for tasks without a duration.
-        """
-        sorted_items = sorted(self.schedule, key=lambda x: _time_to_minutes(x.time_slot))
-        conflicts = []
-        for i in range(len(sorted_items)):
-            for j in range(i + 1, len(sorted_items)):
-                a, b = sorted_items[i], sorted_items[j]
-                if a.end_minutes() > _time_to_minutes(b.time_slot):
-                    conflicts.append((a, b))
-        return conflicts
-
-    def explain_schedule(self) -> str:
-        """Returns a formatted, human-readable string of the current daily schedule."""
-        if not self.schedule:
-            return "No schedule built yet. Call build_schedule() first."
-
-        title = f"Daily Schedule for {self.owner.name}"
-        border = "=" * (len(title) + 4)
-        lines = [border, f"  {title}  ", border, ""]
-
-        priority_label = {1: "HIGH", 2: "MED", 3: "LOW"}
-        for item in self.schedule:
-            freq = item.task.frequency.replace("_", " ")
-            pet_name = item.pet.name if item.pet else "?"
-            pri = priority_label.get(item.task.priority, str(item.task.priority))
-            lines.append(
-                f"  {item.time_slot}  |  {item.task.description:<25}  "
-                f"[{freq}] [{pri}] ({pet_name})"
-            )
-
-        conflicts = self.detect_conflicts()
-        if conflicts:
-            lines.append("")
-            lines.append("  ⚠ CONFLICTS DETECTED:")
-            for a, b in conflicts:
-                lines.append(
-                    f"    '{a.task.description}' ({a.time_slot}) overlaps "
-                    f"'{b.task.description}' ({b.time_slot})"
-                )
-
-        lines.append("")
-        lines.append(border)
-        return "\n".join(lines)

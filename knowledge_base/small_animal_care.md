@@ -1,0 +1,25 @@
+# Small Animal Care Guidelines for Pet Hotels
+
+## Rabbit Care in Hotel Settings
+Rabbits should be fed unlimited timothy hay (the foundation of their diet), fresh leafy greens (romaine, kale, cilantro) twice daily, and a small amount of high-quality pellets once daily. Fresh water must always be available — use both a bottle and a bowl as some rabbits prefer one over the other. Rabbits are crepuscular (most active at dawn and dusk) and should have out-of-enclosure exercise time of at least 2–3 hours per day in a safe, supervised space. Rabbits are fragile and must never be dropped or picked up by their ears or scruff; they can break their own spine by kicking if frightened.
+
+## Rabbit Environmental and Social Needs
+Rabbits are sensitive to heat — keep housing between 60–72°F and never expose to temperatures above 80°F. Provide hiding boxes and tunnels as rabbits need to burrow and hide. Rabbits that live in bonded pairs should always be housed together; separating bonded rabbits causes extreme stress. Handle rabbits gently and allow them to approach on their own terms; a frightened rabbit may thump or bite. Clean the enclosure daily and completely replace bedding every 3 days. Check teeth and nails at intake — overgrown teeth prevent eating.
+
+## Guinea Pig Care
+Guinea pigs require unlimited timothy hay, fresh vegetables (bell peppers are excellent as they are high in vitamin C), and guinea pig pellets. Guinea pigs cannot synthesize vitamin C and will develop scurvy without adequate dietary intake — bell peppers, parsley, or kale must be offered daily. Feed twice daily and remove uneaten fresh food after 2–4 hours. Guinea pigs are highly social and should not be housed alone — if the owner brings multiple, house them together. Provide hiding shelters in the enclosure. Guinea pigs vocalize frequently (wheeks, rumbles, purrs) which is normal; distress calls are high-pitched and repetitive.
+
+## Hamster and Gerbil Care
+Hamsters are nocturnal — do not disturb during the day as this causes stress and can lead to biting. Provide a solid-surface exercise wheel (not a wire wheel), nesting material, and multiple hiding spots. Feed once per day in the evening with a hamster seed/pellet mix, supplemented with small amounts of fresh vegetables. Syrian hamsters are solitary and must be housed alone; dwarf hamsters (Roborovski, Campbell's) can be housed in same-sex pairs if already bonded. Change bedding fully every 5–7 days. Hamsters are prone to wet tail (a deadly bacterial infection) in stressful situations — monitor stool consistency and alert the owner if the hamster appears hunched or has a wet rear end.
+
+## Bird Care in Hotel Settings
+Birds need a consistent daily routine — cover their cage at the same time each night (typically 8–10 PM) and uncover at the same time in the morning (7–8 AM). Feed fresh pellets and seeds daily and remove uneaten fresh food within 4 hours. Many birds require fresh fruits and vegetables daily (parrots, cockatiels). Always provide fresh water daily — birds are sensitive to bacterial growth in water containers. Speak to birds calmly and frequently; parrots and cockatiels are highly social and become distressed with isolation. Schedule at least 1–2 hours of out-of-cage time in a safe, bird-proofed area for parrots and cockatiels.
+
+## Bird Environmental Requirements
+Birds are sensitive to drafts, non-stick cookware fumes (PTFE/Teflon is lethal), scented candles, aerosols, and air fresheners — all of these must be kept away from bird housing areas. Keep temperature between 65–85°F. Birds need 10–12 hours of darkness for sleep. Full-spectrum lighting (near a window or via UV bird lamp) supports their circadian rhythm and vitamin D synthesis. Never place bird cages near air vents, exterior walls, or windows with direct intense sunlight.
+
+## Reptile Care (Lizards, Snakes, Turtles)
+Reptiles are ectothermic and require carefully maintained temperature gradients. Confirm exact temperature and humidity requirements with the owner on intake — different species have very different needs. Provide a warm basking spot and a cooler retreat area within the enclosure. UV-B lighting is essential for many lizards and turtles. Feeding schedules vary widely by species: some eat daily, others weekly. Never handle reptiles immediately after feeding; wait 48 hours to prevent regurgitation. Most reptiles are stress-sensitive in new environments — minimize handling during a hotel stay unless medically necessary.
+
+## Signs of Illness in Small Animals
+Rabbits and guinea pigs: GI stasis (no droppings for 12+ hours) is a life-threatening emergency in rabbits — contact owner and veterinarian immediately. Dull eyes, hunched posture, labored breathing, and complete refusal to eat all require urgent attention. Birds: fluffed feathers while awake, tail bobbing while breathing, sitting on the floor of the cage, discharge from nostrils, and loss of voice all indicate illness. Birds hide illness until critically sick — any change in normal behavior is significant. Hamsters: wet hindquarters indicate wet tail — a veterinary emergency within 24 hours.

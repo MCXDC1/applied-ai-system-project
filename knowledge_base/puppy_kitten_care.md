@@ -1,0 +1,43 @@
+# Puppy and Kitten Care Guidelines for Pet Hotels
+
+## Defining Puppy and Kitten Age Ranges
+Puppies are dogs under 12 months of age. Small breed dogs may be considered puppies until 12 months; large and giant breeds may exhibit puppy behavior and require puppy-specific care until 18–24 months. Kittens are cats under 12 months of age. Both puppies and kittens have significantly higher care needs than adults and should be flagged in the schedule for additional attention and monitoring.
+
+## Puppy Feeding Frequency
+Puppies under 3 months require four feedings per day, evenly spaced throughout the hotel's operating hours (e.g., 7 AM, 11 AM, 3 PM, 7 PM). Puppies aged 3–6 months require three feedings per day. Puppies aged 6–12 months require two to three feedings per day. Toy and miniature breed puppies (Chihuahua, Yorkshire Terrier, Toy Poodle) are highly susceptible to hypoglycemia — never allow more than 4–5 hours between meals. Signs of hypoglycemia: weakness, trembling, glassy eyes, seizures — rub corn syrup on gums and contact a veterinarian immediately.
+
+## Kitten Feeding Frequency
+Kittens under 6 months need three to four small meals per day. Kittens 6–12 months need two to three meals per day. Wet food is strongly preferred for kittens as it supports hydration and kidney development. Do not feed cow's milk to kittens — it causes digestive upset. High-protein kitten-specific food is essential as adult formulas do not meet their caloric and developmental needs.
+
+## Rest and Sleep Requirements for Young Animals
+Puppies need 16–20 hours of sleep per day. Over-stimulation causes biting, hyperactivity, and behavioral problems. Structure puppy activity in short bursts: 15–20 minutes of play followed by 1–2 hours of rest. Kittens also sleep 16–20 hours and should have a quiet, warm space to retreat. Never force a puppy or kitten to continue playing when they show signs of fatigue (lying down, yawning, moving away).
+
+## Socialization Period and Behavioral Development
+The critical socialization window for puppies is 3–14 weeks old. Positive, calm interactions during a hotel stay are important — avoid loud noises, rough handling, or frightening experiences. Kittens have a socialization window of 2–9 weeks. Gentle, frequent handling by staff helps kittens develop into confident adult cats. Always use positive reinforcement (treats, calm praise) and never use punishment or raised voices with young animals.
+
+## Vaccination Status and Disease Risk
+Puppies and kittens with incomplete vaccination series are at higher risk from infectious diseases. Confirm vaccination status on check-in. Puppies that have not completed their core vaccine series (distemper, parvovirus, adenovirus for dogs; panleukopenia, herpesvirus, calicivirus for cats) should be housed separately from other animals. Parvovirus in dogs and panleukopenia in cats can be fatal and highly contagious. Alert the owner and consult vaccination records before allowing young animals in group settings.
+
+## Puppy Behavioral Management in Hotel Settings
+Puppies bite, chew, and jump as normal developmental behavior — redirect to toys immediately; never use hands as toys. Provide appropriate chew toys to meet teething needs (ages 3–6 months). Puppies may cry at night when separated from their littermates or family; provide a covered crate with a warm blanket and a ticking clock or heartbeat toy to reduce anxiety. Do not allow puppies under 16 weeks in group play with adult dogs — size and vaccination status make this high-risk.
+
+## Kitten Environmental Needs
+Kittens require a warm environment (75–80°F) as they cannot regulate body temperature as efficiently as adults. Provide a heated pad on the lowest setting or a warm blanket. Keep kittens away from drafts. Kittens are highly curious and prone to getting stuck in small spaces — check sleeping areas for gaps or hazards. Interactive toys are essential as kittens need frequent play to develop coordination and social skills.
+
+## Health Monitoring for Puppies and Kittens
+Young animals decline rapidly when ill. Check and document food intake at every meal — skipping even one meal is significant and warrants a call to the owner. Monitor stool consistency (soft or bloody stool needs immediate attention). Check for nasal and eye discharge daily. Weigh young animals every 24–48 hours if they are very young (under 3 months); failure to maintain or gain weight is a medical concern. Any vomiting, diarrhea, or lethargy should be escalated to the owner immediately.
+
+## Crate Training and Safe Sleeping for Puppies
+A crate provides puppies with a secure den-like space and reduces the risk of injury or destructive behavior overnight. The crate should be just large enough for the puppy to stand, turn around, and lie down — too large a space encourages toileting inside. Line the crate with a soft washable blanket and, if provided by the owner, a piece of clothing carrying familiar scent to reduce separation distress. Puppies that cry persistently in the crate should not be released immediately as this rewards the behavior; instead, wait for a brief pause in vocalization before opening the door. Never place food, water bowls, or dangling collar tags inside a crate unsupervised, as these are choking and entanglement hazards.
+
+## Litter Box Training Support for Kittens
+Kittens staying at the hotel should have a clean, low-sided litter box placed no more than a few feet from their resting area, since young kittens cannot reliably locate a distant box in time. Use unscented, fine-grained clumping litter unless the owner specifies otherwise, as strong scents and large pellets deter kittens from using the box. After each meal and after waking, gently place the kitten in the box to reinforce the association — never force their paws into the litter or push them down. Scoop the box at minimum twice daily; kittens are fastidious and will avoid a soiled box, leading to accidents elsewhere. Document litter box use frequency so the owner has a baseline, and alert them if the kitten goes more than 12 hours without urinating.
+
+## Teething Management for Puppies
+Puppies begin teething around 3–4 months as adult teeth replace baby teeth, and the associated discomfort drives intense chewing behavior. Provide species-appropriate chew toys rated for puppy use — rubber Kongs, soft nylon chews, or frozen wet washcloths are suitable options that relieve gum pressure without splintering hazards. Rotate two or three different textures to maintain interest and reduce boredom-driven chewing of bedding or kennel equipment. Never offer rawhide, cooked bones, or very hard nylon chews to puppies, as these can cause choking or fractured baby teeth. Redirect all mouthing directed at hands or clothing firmly but gently to a toy, then offer calm praise when the puppy chews the appropriate item.
+
+## Puppy Socialization Activities Safe for Incomplete Vaccination
+Puppies that have not completed their core vaccine series must not share surfaces, equipment, or airspace with unknown dogs of unknown vaccination status. Safe socialization at the hotel includes calm, one-on-one positive interactions with staff, exposure to new surfaces (tile, grass, gravel), gentle handling of paws, ears, and mouth, and introduction to novel sounds at low volume. If other vaccinated and healthy puppies from the same household are boarding together, supervised play between them is appropriate. Environmental enrichment — snuffle mats, Kongs, low tunnels, and gentle hand play — provides mental stimulation equivalent to social play without disease exposure risk. Document each socialization activity and the puppy's response so the owner can continue building on positive experiences at home.
+
+## Kitten Handling and Confidence-Building Activities
+Regular, calm handling during the socialization window (2–9 weeks is ideal, but up to 4–5 months is still valuable) shapes kittens into confident, touch-tolerant adult cats. Each staff interaction should include brief, gentle touching of the kitten's paws, ears, face, and belly — keep sessions to 2–5 minutes and always end while the kitten is still calm and engaged. Provide a variety of safe enrichment: crinkle balls, feather wands, small cardboard boxes, and paper bags with handles removed encourage exploration and play. Allow the kitten to approach new objects at their own pace rather than placing them directly on unfamiliar items, which can trigger fear responses. Track each kitten's confidence level daily (shy, warming up, confident) and share these observations with the owner so they can continue targeted handling at home.
