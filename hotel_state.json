@@ -1,0 +1,59 @@
+{
+  "name": "PawPal Hotel",
+  "open_time": "07:00",
+  "close_time": "20:00",
+  "guests": [
+    {
+      "pet": {
+        "name": "Luna",
+        "species": "dog",
+        "age": 4,
+        "breed": "Golden Retriever",
+        "dietary_restrictions": [
+          "No chicken"
+        ],
+        "medication_information": [
+          "Antibiotics \u2014 Once daily \u2014 Eye drops"
+        ],
+        "additional_information": [],
+        "tasks": [
+          {
+            "description": "Take photo for Owner",
+            "time": "12:00",
+            "duration": "0:05",
+            "frequency": "daily",
+            "priority": 2,
+            "is_completed": false,
+            "due_date": null
+          }
+        ]
+      },
+      "owner_name": "Sarah",
+      "owner_phone": "000-000-0000",
+      "check_in": "2026-04-29",
+      "check_out": "2026-05-08",
+      "special_instructions": ""
+    },
+    {
+      "pet": {
+        "name": "Mumu",
+        "species": "cat",
+        "age": 5,
+        "breed": "Calico",
+        "dietary_restrictions": [
+          "No beef"
+        ],
+        "medication_information": [],
+        "additional_information": [
+          "Scared of dogs"
+        ],
+        "tasks": []
+      },
+      "owner_name": "Mia",
+      "owner_phone": "000-000-0001",
+      "check_in": "2026-04-29",
+      "check_out": "2026-05-05",
+      "special_instructions": ""
+    }
+  ]
+}
